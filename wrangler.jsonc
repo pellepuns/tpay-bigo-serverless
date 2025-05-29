@@ -1,0 +1,30 @@
+{
+  "name": "tpay-bigo-serverless",
+  "main": "./dist/index.js",
+  "assets": {
+    "directory": "./dist"
+  },
+  "compatibility_date": "2025-04-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
+  "upload_source_maps": true,
+  "vars": {
+    "EXAMPLE_VALUE": "example_value"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "tpay-bigo-serverless",
+      "database_id": "807c9796-0dba-4bf5-8ae6-759f70817e6a"
+    }
+  ],
+  "workflows": [
+    {
+      "name": "saas-admin-template-customer-workflow",
+      "binding": "CUSTOMER_WORKFLOW",
+      "class_name": "CustomerWorkflow"
+    }
+  ]
+}
